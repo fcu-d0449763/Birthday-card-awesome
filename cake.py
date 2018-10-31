@@ -1,0 +1,32 @@
+# 用烏龜畫蛋糕
+import turtle
+cake=turtle.Turtle()
+cake.shape('turtle')
+
+def make_cake(x=0, y=0):
+    cake.penup()
+    cake.color('pink')
+    cake.goto(x, y)
+    cake.pendown()
+    cake.begin_fill()
+    cake.goto(x + 20, y)
+    cake.goto(x + 20, y + 20)
+    cake.goto(x - 20, y + 20)
+    cake.goto(x - 20, y)
+    cake.goto(x, y)  
+    cake.end_fill()
+    cake.goto(x, y + 20)
+    cake.color('yellow')
+    cake.goto(x, y + 35)
+    cake.goto(x, y + 30)
+    cake.color('black')
+    cake.goto(x, y + 20)
+    cake.penup()
+    cake.goto(x, y + 10)
+
+make_cake(0,0)
+make_cake(-100,0)
+make_cake(100,0)
+make_cake(-50,50)
+make_cake(50,50)
+make_cake(0,100)
